@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Authentication System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="auth-container" class="container">
+        <h2>Register</h2>
+        <div id="register-form">
+            <div class="input-group">
+                <label for="register-username">Username:</label>
+                <input type="text" id="register-username">
+            </div>
+            <div class="input-group">
+                <label for="register-password">Password:</label>
+                <input type="password" id="register-password">
+            </div>
+            <button onclick="registerUser()">Register</button>
+            <p>Already have an account? <a class="log-in" href="#" onclick="showLogin()">Log in</a></p>
+        </div>
+
+        <div id="login-form" class="hidden">
+            <h2>Login</h2>
+            <div class="input-group">
+                <label for="login-username">Username:</label>
+                <input type="text" id="login-username">
+            </div>
+            <div class="input-group">
+                <label for="login-password">Password:</label>
+                <input type="password" id="login-password">
+            </div>
+            <button onclick="loginUser()">Log in</button>
+            <p>Don't have an account? <a href="#" onclick="showRegister()">Register</a></p>
+        </div>
+    </div>
+
+    <div id="secured-page" class="container hidden">
+        <h2>Welcome to the secured page!</h2>
+        <p>You have successfully logged in.</p>
+        <button onclick="logout()">Logout</button>
+    </div>
+    <script src="index.js"></script>
+
+</body>
+
+</html>
